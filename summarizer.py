@@ -1,10 +1,7 @@
-import os
-from dotenv import load_dotenv
+import streamlit as st
 import google.generativeai as genai
 
-load_dotenv()
-
-api_key = os.getenv("API_KEY")
+api_key = st.secrets["API_KEY"]
 
 def summarize_jd(industry, location, role, job_description):
     template = f"""
