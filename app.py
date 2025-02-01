@@ -17,7 +17,8 @@ with st.form("my_form"):
 
 if submit:
     if jd and industry and location and role:
-        result = summarize_jd(jd, industry, location, role)
+        with st.spinner("Processing... Please wait ⏳"):
+            result = summarize_jd(jd, industry, location, role)
         st.write(result)
     else:
         st.error("Please fill in all fields.")
