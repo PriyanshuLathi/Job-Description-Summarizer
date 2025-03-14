@@ -13,7 +13,7 @@ The **Job Description Summarizer** is a **Streamlit** application that uses **Go
 
 ## Demo
 
-Experience the live application: [Job Description Summarizer using Gemini](https://ai-job-description-summarizer.onrender.com/)
+Experience the live application: [Job Description Summarizer using Gemini](https://job-description-summarizer.onrender.com)
 
 ## Tech Stack
 
