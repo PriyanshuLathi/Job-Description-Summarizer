@@ -1,4 +1,4 @@
-# Job Description Summarizer using Gemini
+# Job Description Summarizer
 
 ## Overview
 
