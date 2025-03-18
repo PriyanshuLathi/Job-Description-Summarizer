@@ -2,24 +2,26 @@
 
 ## Overview
 
-The **Job Description Summarizer** is a **Streamlit** application that uses **Google’s Gemini-1.5-Flash model** to generate concise and structured summaries of job descriptions. It extracts key details such as **responsibilities, requirements, and suggested resume highlights** to help job seekers and recruiters quickly understand job postings.
+The **Job Description Summarizer** is a **Streamlit** application that uses **LangChain** and **Google’s Gemini-1.5-Pro model** to generate concise and structured summaries of job descriptions. It extracts key details such as **responsibilities, requirements, and suggested resume highlights** to help job seekers and recruiters quickly understand job postings.
 
 ## Features
 
-- **AI-Powered Summarization** – Uses **Gemini-1.5-Flash** for advanced text processing
+- **AI-Powered Summarization** – Uses **Gemini-1.5-Pro** via **LangChain** for advanced text processing
 - **Detailed Skill Extraction** – Identifies key **skills, responsibilities, and project types**
 - **Resume Optimization Advice** – Provides insights on how to tailor resumes for each job
+- **Job Market Insights** – Offers trends, in-demand skills, and career growth opportunities
 - **User-Friendly Web Interface** – Built using **Streamlit** for easy interaction
 
 ## Demo
 
-Experience the live application: [Job Description Summarizer using Gemini](https://job-description-summarizer.onrender.com)
+Experience the live application: [Job Description Summarizer](https://job-description-summarizer.onrender.com)
 
 ## Tech Stack
 
 - **Python** – Backend logic
 - **Streamlit** – Web-based user interface
-- **Google Gemini-1.5-Flash API** – AI-based text summarization
+- **LangChain** – Orchestrating LLM responses
+- **Google Gemini-1.5-Pro API** – AI-based text summarization
 - **dotenv** – Secure API key management
 
 ## Installation & Setup
@@ -27,8 +29,8 @@ Experience the live application: [Job Description Summarizer using Gemini](https
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/PriyanshuLathi/Job-Description-Summarizer-using-Gemini.git
-cd Job-Description-Summarizer-using-Gemini
+git clone https://github.com/PriyanshuLathi/Job-Description-Summarizer.git
+cd Job-Description-Summarizer
 ```
 
 ### 2. Create and Activate a Virtual Environment:
@@ -46,14 +48,7 @@ pip install -r requirements.txt
 
 ### 4. Set up Gemini API key:
 
-Create a `.streamlit/secrets.toml` file and add your Gemini API key:
-
-```bash
-[secrets]
-API_KEY = "your_api_key_here"
-```
-
-Alternatively, you can create a `.env` file in the project root and add your Gemini API key:
+Create a `.env` file in the project root and add your Gemini API key:
 
 ```bash
 API_KEY=your_api_key_here
@@ -70,19 +65,19 @@ streamlit run app.py
 - Open the web interface.
 - Enter the Job Role, Location, Industry, and Job Description.
 - Click Summarize, and the AI will extract key details.
+- View additional **Job Market Insights** for trends and career guidance.
 
 ## Project Structure
 
 ```bash
-📂 Job-Description-Summarizer-using-Gemini
-│── app.py                # Main Streamlit app
-│── summarizer.py         # Job description processing logic using Gemini
+📂 Job-Description-Summarizer
+│── app.py                # Main app
 │── requirements.txt      # Dependencies
-│── .streamlit/secrets.toml  # API key storage (ignored in .gitignore)
+│── .env                  # API key storage (ignored in .gitignore)
 │── README.md             # Documentation
 ```
 
-## Example Output
+## Example
 
 ### Input:
 
@@ -93,7 +88,7 @@ Industry: Technology
 Job Description: We are looking for a Data Scientist with experience in Python, machine learning, and NLP.
 ```
 
-### Output:
+### Output (Shortened):
 
 ```bash
 - Job Title: Data Scientist
@@ -101,11 +96,17 @@ Job Description: We are looking for a Data Scientist with experience in Python, 
 - Requirements: Python, ML, NLP, statistical modeling
 - Projects: Predictive modeling, NLP-based applications
 - Resume Advice: Highlight Python expertise, feature ML projects with real-world impact
+
+📊 Job Market Insights:
+- **Trends**: Increasing demand for AI-driven analytics
+- **In-Demand Skills**: Python, deep learning, big data
+- **Growth Potential**: High job growth in AI-related fields
+- **Common Interview Questions**: Explain a machine learning model you've built.
 ```
 
 ## Conclusion
 
-The **Job Description Summarizer using Gemini** leverages AI to efficiently extract key insights from job descriptions, helping job seekers and recruiters save time while optimizing resumes for specific roles. By utilizing **Google's Gemini-1.5-Flash model**, this tool provides structured and actionable insights tailored to each job posting.
+The **Job Description Summarizer using LangChain & Gemini** leverages AI to efficiently extract key insights from job descriptions, helping job seekers and recruiters save time while optimizing resumes for specific roles. By utilizing **Google's Gemini-1.5-Pro model** with **LangChain**, this tool provides structured and actionable insights tailored to each job posting.
 
 With an intuitive **Streamlit** interface and secure API key management via **dotenv**, the application is easy to use and deploy. Future improvements could include **multi-language support, enhanced summarization models,** and **integration with job boards**.
 
@@ -136,7 +137,7 @@ git push origin feature-branch-name
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/PriyanshuLathi/Job-Description-Summarizer-using-Gemini/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/PriyanshuLathi/Job-Description-Summarizer/blob/main/LICENSE) file for details.
 
 ## Contact
 
